@@ -1,4 +1,5 @@
-/* Reset e Configurações Gerais */
+
+/*  RESET E CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -7,14 +8,16 @@
 }
 
 :root {
-    --bg-color: #0b0f19;         
+    --bg-color: #0b0f19;
+    --surface-color: #10162a;
     --navbar-bg: rgba(11, 15, 25, 0.85);
-    --text-color: #e2e8f0;      
-    --text-muted: #64748b;      
+    --text-color: #e2e8f0;
+    --text-muted: #64748b;
     --accent-color: #00ff66;    /* Verde principal do tema */
-    --accent-hover: #00cc52;    
+    --accent-hover: #00cc52;
     --accent-gradient: linear-gradient(135deg, #00ff66, #059669);
     --glow-color: rgba(0, 255, 102, 0.25);
+    --border-color: rgba(0, 255, 102, 0.15);
 }
 
 body {
@@ -26,7 +29,8 @@ body {
     overflow-x: hidden;
 }
 
-/* Navbar */
+
+ /* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -39,7 +43,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid rgba(0, 255, 102, 0.1); 
+    border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
@@ -57,10 +61,11 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
+    align-items: center;
     gap: 1.5rem;
 }
 
-/* Estilo Base dos Botões da Navbar */
+/* Estilo base dos botões da navbar (ícones e texto) */
 .nav-btn {
     text-decoration: none;
     padding: 0.6rem;
@@ -68,46 +73,51 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    color: var(--text-color);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.nav-btn-text {
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.nav-btn-text:hover {
+    color: var(--accent-color);
+    background-color: rgba(0, 255, 102, 0.08);
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
 .tech-icon {
-    font-size: 1.8rem; /* Ícones ligeiramente maiores para destaque */
+    font-size: 1.8rem;
     transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
 }
 
-/* -----------------------------------------
-   CORES CUSTOMIZADAS POR TECNOLOGIA (NAVBAR)
-   ----------------------------------------- */
-
-/* HTML5 - Laranja Cyber */
+/* Cores customizadas por tecnologia (navbar) */
 .btn-html5 .tech-icon { color: #ff5722; }
 .btn-html5:hover { background-color: rgba(255, 87, 34, 0.08); }
 .btn-html5:hover .tech-icon { transform: scale(1.2); filter: drop-shadow(0 0 10px rgba(255, 87, 34, 0.8)); }
 
-/* CSS3 - Azul Cyber */
 .btn-css3 .tech-icon { color: #00d2ff; }
 .btn-css3:hover { background-color: rgba(0, 210, 255, 0.08); }
 .btn-css3:hover .tech-icon { transform: scale(1.2); filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.8)); }
 
-/* JavaScript - Amarelo Cyber */
 .btn-js .tech-icon { color: #ffd600; }
 .btn-js:hover { background-color: rgba(255, 214, 0, 0.08); }
 .btn-js:hover .tech-icon { transform: scale(1.2); filter: drop-shadow(0 0 10px rgba(255, 214, 0, 0.8)); }
 
-/* Node.js - Verde Cyber */
 .btn-node .tech-icon { color: #68a063; }
 .btn-node:hover { background-color: rgba(104, 160, 99, 0.08); }
 .btn-node:hover .tech-icon { transform: scale(1.2); filter: drop-shadow(0 0 10px rgba(104, 160, 99, 0.8)); }
 
-/* ----------------------------------------- */
 
-/* Container do Conteúdo Principal */
+  /* HERO (SEÇÃO PRINCIPAL)*/
 .hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex: 1;
     padding: 8rem 10% 4rem 10%;
     gap: 4rem;
     max-width: 1400px;
@@ -115,7 +125,6 @@ body {
     width: 100%;
 }
 
-/* Coluna de Texto (Esquerda) */
 .hero-content {
     flex: 1.2;
     display: flex;
@@ -152,7 +161,6 @@ body {
     max-width: 540px;
 }
 
-/* Botões Cyber com Ícones */
 .cta-buttons {
     display: flex;
     gap: 1.2rem;
@@ -177,7 +185,7 @@ body {
 
 .btn-primary {
     background-color: var(--accent-color);
-    color: #000; 
+    color: #000;
     box-shadow: 0 4px 20px rgba(0, 255, 102, 0.3);
 }
 
@@ -200,7 +208,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
 }
 
-/* Foto de Perfil (Direita) */
+/* Foto de perfil */
 .hero-image-container {
     flex: 0.8;
     display: flex;
@@ -208,7 +216,6 @@ body {
     align-items: center;
 }
 
-/* Moldura Blob Verde Cyber */
 .profile-frame {
     position: relative;
     width: 320px;
@@ -228,7 +235,6 @@ body {
     border: 4px solid var(--bg-color);
 }
 
-/* Animação CSS */
 @keyframes morphingBlob {
     0% {
         border-radius: 42% 58% 65% 35% / 45% 45% 55% 55%;
@@ -238,7 +244,87 @@ body {
     }
 }
 
-/* Responsividade */
+/* =========================================
+   SEÇÃO DE PROJETOS
+   ========================================= */
+.projects-section {
+    padding: 2rem 10% 6rem 10%;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px var(--glow-color);
+}
+
+.project-card-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(0, 255, 102, 0.08);
+    color: var(--accent-color);
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.project-link {
+    margin-top: 0.6rem;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
 @media (max-width: 968px) {
     .hero-container {
         flex-direction: column-reverse;
@@ -267,5 +353,21 @@ body {
     .profile-frame {
         width: 260px;
         height: 260px;
+    }
+
+    .project-card {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .nav-links {
+        gap: 0.6rem;
+    }
+
+    .nav-btn-text {
+        padding: 0.6rem 0.6rem;
+        font-size: 0.85rem;
     }
 }

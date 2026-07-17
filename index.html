@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio CyberTech</title>
     <link rel="stylesheet" href="style.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -17,54 +16,94 @@
         <nav>
             <ul class="nav-links">
                 <li>
-                    <a href="#html5" class="nav-btn btn-html5" aria-label="HTML5" title="HTML5">
+                    <a href="#projetos" class="nav-btn nav-btn-text">Projetos</a>
+                </li>
+                <li>
+                    <span class="nav-btn btn-html5" aria-label="HTML5" title="HTML5">
                         <i class="fab fa-html5 tech-icon"></i>
-                    </a>
+                    </span>
                 </li>
                 <li>
-                    <a href="#css3" class="nav-btn btn-css3" aria-label="CSS3" title="CSS3">
+                    <span class="nav-btn btn-css3" aria-label="CSS3" title="CSS3">
                         <i class="fab fa-css3-alt tech-icon"></i>
-                    </a>
+                    </span>
                 </li>
                 <li>
-                   <a href="#javascript" class="nav-btn btn-js" aria-label="JavaScript" title="JavaScript">
+                    <span class="nav-btn btn-js" aria-label="JavaScript" title="JavaScript">
                         <i class="fab fa-js tech-icon"></i>
-                    </a>
+                    </span>
                 </li>
                 <li>
-                    <a href="#node" class="nav-btn btn-node" aria-label="Node.js" title="Node.js">
+                    <span class="nav-btn btn-node" aria-label="Node.js" title="Node.js">
                         <i class="fab fa-node-js tech-icon"></i>
-                    </a>
+                    </span>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main class="hero-container">
-        
-        <div class="hero-content">
-            <span class="subtitle">João Victor Paixão Zolim</span>
-            <h1>Desenvolvedor <span class="highlight">Front-End</span></h1>
-            <p>
-                Especialista em construir interfaces modernas, intuitivas e de alta performance com implementação de IA. 
-                Focado em escrever código limpo e criar experiências digitais memoráveis.
-            </p>
-            
-            <div class="cta-buttons">
-                <a href="https://www.linkedin.com/in/joão-victor-paixão-zolim-b54595419?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="cyber-btn btn-primary">
-                    <i class="fab fa-linkedin-in"></i> LinkedIn
-                </a>
-                <a href="https://github.com/joaovpzdev" target="_blank" class="cyber-btn btn-secondary">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
+    <main>
+
+        <section class="hero-container">
+
+            <div class="hero-content">
+                <span class="subtitle">João Victor Paixão Zolim</span>
+                <h1>Desenvolvedor <span class="highlight">Front-End</span></h1>
+                <p>
+                    Especialista em construir interfaces modernas, intuitivas e de alta performance com implementação de IA.
+                    Focado em escrever código limpo e criar experiências digitais memoráveis.
+                </p>
+
+                <div class="cta-buttons">
+                    <a href="https://www.linkedin.com/in/joão-victor-paixão-zolim-b54595419?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="cyber-btn btn-primary">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/joaovpzdev" target="_blank" rel="noopener noreferrer" class="cyber-btn btn-secondary">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
             </div>
-        </div>
-        
-        <div class="hero-image-container">
-            <div class="profile-frame">
-                <img src="images/fotoperfilminha.jpg" alt="Foto de Perfil" class="profile-img">
+
+            <div class="hero-image-container">
+                <div class="profile-frame">
+                    <img src="images/fotoperfilminha.jpg" alt="Foto de Perfil" class="profile-img">
+                </div>
             </div>
-        </div>
+
+        </section>
+
+        <section id="projetos" class="projects-section">
+            <div class="section-header">
+                <span class="subtitle">Meus Trabalhos</span>
+                <h2>Projetos</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-card-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>Calculadora</h3>
+                    <p>Calculadora funcional desenvolvida em JavaScript, com foco em lógica de operações e interface simples.</p>
+                    <a href="https://joaovpzdev.github.io/Projeto-calculadora1/" target="_blank" rel="noopener noreferrer" class="cyber-btn btn-secondary project-link">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Projeto
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Portfólio Dev</h3>
+                    <p>Este mesmo portfólio, construído com HTML5 e CSS3, apresentando minhas habilidades e projetos.</p>
+                    <a href="https://joaovpzdev.github.io/Projeto-Portfolio-Dev/" target="_blank" rel="noopener noreferrer" class="cyber-btn btn-secondary project-link">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Projeto
+                    </a>
+                </article>
+
+            </div>
+        </section>
 
     </main>
 
